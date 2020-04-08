@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="hour_divider_margin_top">35dp</dimen>
+    <dimen name="hour_divider_margin_tv">23dp</dimen>
+    <dimen name="hour_divider_height">1dp</dimen>
+</resources>

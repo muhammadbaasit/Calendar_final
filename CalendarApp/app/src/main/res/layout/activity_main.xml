@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.calendarapp.CalViewModel" />
+
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:onClick="@{viewModel::onTvClick}"
+                            android:drawableEnd="@drawable/ic_down"/>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="30dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="40dp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:background="@color/divider_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_calendar_root"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_columnWeight="2"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="@dimen/hour_divider_margin_top">
+
+                            <View
+                                android:id="@+id/v1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/hour_divider_height"
+                                android:layout_marginTop="@dimen/hour_divider_margin_top"
+                                android:background="@color/divider_color" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/flt_btn"
+                android:src="@drawable/ic_add"
+                android:layout_marginBottom="40dp"
+                android:clickable="true"
+                android:onClick="@{viewModel::onFltClick}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.940"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
